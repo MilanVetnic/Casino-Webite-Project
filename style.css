@@ -223,7 +223,7 @@ nav > ul > li > ul > li > a {
 .ui-content {      
   height: 410px;
   width: 100%;
-  top: 257px;
+  top: 24vh;
   padding-left: 99px;
   position: relative;
 }
