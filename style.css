@@ -1,4 +1,3 @@
-﻿@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,500;1,400&display=swap");
 *, *:before, *:after {
   padding: 0px;
@@ -8,29 +7,25 @@
   list-style: none;
   font: normal 16px/100% 'Rubik', Helvetica, sans-serif; 
 }
-
 body {
   height: 100vh;
-  width: 100vw;
-  overflow-x: hidden;
+  width: 100%;
 }
-
 header {     
   height: 70px;
-  width: 100%;
   background: red;
 }
 .logo {
   float: left;
-  position: absolute;
   margin-left: 100px;
+  position: absolute;
 }
 .logo a {
-  font-size: 1.2rem;
+  z-index: 1;
   font-weight: 500;
   line-height: 68px;
+  font-size: 1.2rem;
   letter-spacing: 6px;
-  z-index: 1;
 }
 nav {
   float: right;
@@ -51,55 +46,54 @@ nav ul li a:not(:only-child):after, nav ul li a:visited:not(:only-child):after {
   padding-left: 4px;
   content: ' ▾';
 }
-
 .nav-mobile {
-  display: none;
-  position: absolute;
-  top: 0;
-  right: 60px;
   height: 70px;
   width: 70px;
+  top: 0;
+  right: 60px;
+  display: none;
+  position: absolute;
 }
 #nav-toggle {
-  position: absolute;
-  cursor: pointer;
-  left: 40px;
   top: 21px;
+  left: 40px;
+  cursor: pointer;
+  position: absolute;
   padding: 10px 35px 16px 0;
 }
 #nav-toggle span {
-  display: block;
-  position: absolute;
-  cursor: pointer;
-  background: #ffffff;
-  content: '';
   height: 5px;
   width: 35px;
+  content: '';
   border-radius: 1px;
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  background: #ffffff;
   transition: all 300ms ease-in-out;
 }
 #nav-toggle span:before {
-  display: block;
-  position: absolute;
-  cursor: pointer;
-  background: #ffffff;
-  content: '';
   height: 5px;
   width: 35px;
   top: -10px;
+  content: '';
   border-radius: 1px;
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  background: #ffffff;
   transition: all 300ms ease-in-out;
 }
 #nav-toggle span:after {
-  display: block;
-  position: absolute;
-  cursor: pointer;
-  background: #ffffff;
-  content: '';
   height: 5px;
   width: 35px;
   bottom: -10px;
+  content: '';
   border-radius: 1px;
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  background: #ffffff;
   transition: all 300ms ease-in-out;
 }
 #nav-toggle.active span {
@@ -113,7 +107,6 @@ nav ul li a:not(:only-child):after, nav ul li a:visited:not(:only-child):after {
   top: 0;
   transform: rotate(-45deg);
 }
-
 
 .ui-big-image {
   opacity: 1;
@@ -133,14 +126,14 @@ nav ul li a:not(:only-child):after, nav ul li a:visited:not(:only-child):after {
   transform: scale(1);
 }
 img {
-  image-rendering: crisp-edges;
   max-width: 100%;
+  image-rendering: crisp-edges;
 }
 .ui-big-images {
-  display: flex;
-  overflow: hidden;
   height: 100%;
   width: 100%;
+  display: flex;
+  overflow: hidden;
   background-color: #1A130C;
 }
 .ui-big-image {
@@ -150,10 +143,10 @@ img {
   transition-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
 }
 .ui-big-image img {
+  height: 100%;
+  width: 100%;
   display: block;
   object-fit: cover;
-  width: 100%;
-  height: 100%;
 }
 .ui-big-image > .img1 {
   object-position: 85% 50%;
@@ -172,7 +165,6 @@ img {
   filter: contrast(105%);
 } 
 
-
 /* --  Desktop  -- */
 @media (min-width: 890px){
 /* -- Header -- */
@@ -183,10 +175,10 @@ img {
   background-color: rgb(31, 31, 31);
 }
 .headline1 > h3 {
-  color: #ffffff;
-  font-size: 1.1rem;
-  font-weight: 100;
   padding-top: 5px;
+  font-weight: 100;
+  font-size: 1.1rem;
+  color: #ffffff;
 }
 .headline1 > h2 {
   font-size: 1.6rem;
@@ -207,55 +199,55 @@ nav ul li a {
   display: flex;
   flex-direction: row;
   align-items: center;
-  color: #ffffff; 
   margin-right: 30px;
   line-height: 70px;
+  color: #ffffff; 
 }
 nav > ul > li > ul > li > a {
   padding: 15px;
   line-height: 20px;
 }
 .nav-dropdown {
+  z-index: 1;
   display: none;
   position: absolute;
-  background-color: red;
   border-radius: 1px;
-  z-index: 1;
+  background-color: red;
 }
 /* -- Images and Text -- */
 #app {
-  width: 100%;
   height: 72.9vh;
+  width: 100%;
   overflow: hidden;
 } 
 .ui-content {      
-  position: relative;
+  height: 410px;
+  width: 100%;
   top: 257px;
   padding-left: 99px;
-  width: 100%;
-  height: 410px;
+  position: relative;
 }
 .ui-nav {
-  position: absolute;
   top: 37vh;
+  position: absolute;
 }
 .ui-content .ui-nav button:hover, .ui-content .ui-nav button:focus {
   outline: none;
 }
 .ui-content .ui-nav button:active {
   outline: none;
-  transform: translateY(0.25em);
   transition-duration: 100ms;
+  transform: translateY(0.25em);
 }
 .ui-nav button {
-  background: #493e56;
-  border: none;
-  appearance: none;
-  padding: .5em;
   width: 1.9em;
+  padding: .5em;
+  border: none;
   color: #FFF;
-  font-family: monospace;
+  appearance: none;
   transition: inherit;
+  background: #493e56;
+  font-family: monospace;
   transition-duration: 300ms;
 }
 .ui-content > h2 {
@@ -267,38 +259,40 @@ nav > ul > li > ul > li > a {
 }
 .ui-content > h1 {
   color: red;
-  font-size: 2.1vmax;
-  font-weight: 500;
-  letter-spacing: 3px;
   line-height: 1;
+  font-weight: 500;
+  font-size: 2.1vmax;
+  letter-spacing: 3px;
   margin-bottom: 60px;
 }
 .info-btn {
   color: red;
-  font-size: 1.3vmax;
   font-weight: 500;
-  letter-spacing: 2px;
-  padding: 14px 21px;
-  border-radius: 5px solid;
   transition: 0.3s;
+  padding: 14px 21px;
+  font-size: 1.3vmax;
+  letter-spacing: 2px;
   transition: background;
+  border-radius: 5px solid;
   background-color: white;
 }
 .info-btn:hover {
-  background: red;
   color: white;
   font-weight: 100;
+  background: red;
 }
 /* -- Footer -- */
 footer{
-  background-color: red;
   height: 111px;
   width: 100%;
+  background-color: red;
 }
-.one, .two, .three {
-  position: relative;
-  width: 350px;
+.one, 
+.two, 
+.three {
   height: 76px;
+  width: 350px;
+  position: relative;
   transform: translate(-50%, -50%);
 }
 .one {
@@ -313,35 +307,44 @@ footer{
   bottom: 85.5%;
   left: 80%;
 }
-.n1, .n2, .n3 {
-  position: absolute;
-  font-size: 1.1rem;
-  font-weight: 900;
+.n1, 
+.n2, 
+.n3 {
   top: 36%;
   left: 18.4%;
+  font-weight: 900;
+  font-size: 1.1rem;
   color: black;
-}
-.r-white, .re-white, .rec-white {
   position: absolute;
+}
+.r-white, 
+.re-white, 
+.rec-white {
   top: 27%;
   left: 11.3%;
+  position: absolute;
 }
-.span0, .span2, .span4{
+.span0, 
+.span2, 
+.span4{
   color: white;
   font-size: 14px;
 }
-.span1, .span3, .span5 {
+.span1, 
+.span3, 
+.span5 {
   color: white;
   font-size: 10px;
   font-family: Helvetica;
 }
-.register, .playtowin {
-  color: white;
-  position: absolute;
+.register, 
+.playtowin {
   top: 17%;
   left: 34%;
-  text-align: left;
   margin-top: 4px;
+  color: white;
+  text-align: left;
+  position: absolute;
 }
 .deposit {
   position: absolute;
@@ -350,18 +353,19 @@ footer{
   text-align: left;
   height: 38px;
 }
-.span0, .span5, .span4 {
+.span0, 
+.span5, 
+.span4 {
   padding-bottom: 11px;
   letter-spacing: .4px;
 }
 .span3 {
-  line-height: 1.7;
-  letter-spacing: .2px;
-  padding-top: 3px;
   width: 180px;
+  line-height: 1.7;
+  padding-top: 3px;
+  letter-spacing: .2px;
  }
 }
-
 
 /* --  Mobile  -- */
 @media (min-width: 0px) and (max-width: 889px) {
@@ -393,42 +397,42 @@ nav ul li {
   padding: 10px 0 0 45px;
 }
 .nav-dropdown {
+  width: 10.5rem;
+  top: -2px;
+  margin-left: 80px;
   display: flex;
   flex-direction: row;
-  position: absolute;
   align-items: center;
-  margin-left: 80px;
-  top: -2px;
-  width: 10.5rem;
+  position: absolute;
 } 
 .dropdown-item {
+  height: 50px;
+  width: 2.5rem;
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 2.5rem;
-  height: 50px;
 }
 /* -- Images and Text -- */
 #app {
-  position: relative;
-  overflow: hidden;
   height: 36vh;
-  width: 100vw;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
 }  
 img {
   max-width: 100%;
 }
 .ui-big-images {
-  overflow: hidden;
-  display: flex;
   height: 100%;
   width: 100%;
+  display: flex;
+  overflow: hidden;
   background-color: #1A130C;
 }
 .ui-big-image {
-  display: block;
   height: 100%;
   width: 100%;
+  display: block;
   margin-right: -100%;
   transition-duration: 0.7s, 0.7s, 0.7s;
   transition-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
@@ -452,57 +456,57 @@ img {
   filter: contrast(101%);
 }
 .ui-content {    
-  position: relative;
-  padding-left: 41px;
   top: 9vh;
   width: 100%;
+  padding-left: 41px;
+  position: relative;
 }
 .ui-nav {
-  position: absolute;
-  top: 20vh;
   height: 70%;
   width: 100%;
+  top: 20vh;
+  position: absolute;
 }
 .ui-content .ui-nav button:hover, .ui-content .ui-nav button:focus {
   outline: none;
 }
 .ui-content .ui-nav button:active {
   outline: none;
-  transform: translateY(0.25em);
   transition-duration: 100ms;
+  transform: translateY(0.25em);
 }
 .ui-nav button {
-  background: #493e56;
+  width: 1.4rem;
+  padding: .3rem;
+  color: #FFF;
   border: none;
   appearance: none;
-  padding: .3rem;
-  width: 1.4rem;
-  color: #FFF;
-  font-family: monospace;
   transition: inherit;
+  background: #493e56;
+  font-family: monospace;
   transition-duration: 300ms;
 }
 .ui-content > h2 {
   color: white;
-  font-size: 4vmin;
   font-weight: 400;
+  font-size: 4vmin;
 }
 .ui-content > h1 {
   color: red;
-  font-size: 2.8vmin;
   font-weight: 900;
+  font-size: 2.8vmin;
   letter-spacing: 1px;
   padding-bottom: 1.8rem;
 }
 .info-btn {
   color: red;
-  font-weight: 300;
   font-size: 2vw;
-  letter-spacing: 2px;
-  padding: 9px 15px;
-  border-radius: 5px solid;
+  font-weight: 300;
   transition: 0.3s;
+  padding: 9px 15px;
+  letter-spacing: 2px;
   transition: background;
+  border-radius: 5px solid;
   background-color: white;
 }
 .info-btn:hover {
@@ -512,64 +516,75 @@ img {
 }  
 /* -- Footer -- */
 footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-image: url('img/casino.jpg');
-  background-repeat: inherit;
-  object-fit: cover;
   height: 660px; 
   width: 100%;
+  object-fit: cover;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-repeat: inherit;
+  background-image: url('img/casino.jpg');
 }
-.one, .two, .three {
-  position: relative;
-  margin: 93px 0 0 0;
-  width: 350px;
+.one, 
+.two, 
+.three {
   height: 76px;
+  width: 350px;
+  margin: 93px 0 0 0;
+  position: relative;
 }
-.n1, .n2, .n3 {
-  position: absolute;
-  color: black;
+.n1, 
+.n2, 
+.n3 {
+  top: 50%;
+  left: 20%;
   font-weight: 900;
   line-height: 10px;
-  top: 50%;
-  left: 20%;
+  color: black;
+  position: absolute;
   transform: translate(-50%, -50%);
 }
-.r-white, .re-white, .rec-white {
-  position: absolute;
+.r-white, 
+.re-white, 
+.rec-white {
   top: 50%;
   left: 20%;
+  position: absolute;
   transform: translate(-50%, -50%);
 }
-.register, .deposit, .playtowin {
-  position: absolute;
-  text-align: left;
+.register, 
+.deposit, 
+.playtowin {
   height: 50px;
   width: 175px;
   top: 43%;
   left: 59%;
-  transform: translate(-50%, -50%);
   margin-top: 9px;
+  text-align: left;
+  position: absolute;
+  transform: translate(-50%, -50%);
 }
-.span0, .span2, .span4 {
+.span0, 
+.span2, 
+.span4 {
   color: white;
   font-size: 14px;
   margin-bottom: 5px;
 }
-.span1, .span3, .span5 {
-  color: white;
+.span1, 
+.span3, 
+.span5 {
   font-size: 9px;
-  font-weight: 100;
   line-height: 3;
+  color: white;
+  font-weight: 100;
   letter-spacing: .5px;
 }
 .span3 {
-  line-height: 1.4;
   width: 185px;
+  line-height: 1.4;
  }
 }
-
 
 /* --  Images and Text  -- */
 @media (min-width: 320px) and (max-width: 430px) {
@@ -580,15 +595,15 @@ footer {
   filter: brightness(99%);
 }
 .ui-big-image > .img2 {
-  object-fit: cover;
-  object-position: 79% 50%;
   opacity: 0.9;
+  object-fit: cover;
   filter: contrast(101%);
+  object-position: 79% 50%;
 }
 .ui-big-image > .img3 {
   object-fit: cover;
-  object-position: 75% 50%;
   filter: contrast(101%);
+  object-position: 75% 50%;
 }
 .ui-content > h2 {
   font-size: 2.0vmax;
@@ -600,7 +615,3 @@ footer {
   margin-left: 70px;
  } 
 }
-
-
-
-
